@@ -1,3 +1,6 @@
 name: Jonathan Chang
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+
+github_username: changjo512
+linkedin_username: changjo512
