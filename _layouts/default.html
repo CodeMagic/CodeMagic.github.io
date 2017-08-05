@@ -1,28 +1,44 @@
 <!DOCTYPE html>
-	<html>
-		<head>
+  <html>
+    <head>
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		</head>
 		<body>
 			<nav>
-	    		<h1>Code Magic</h1>
-			<ul>
-				<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
+	      <h1>Code Magic</h1>
+			  <ul>
+				  <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/cv">CV</a></li>
+          <li><a href="/blog">Blog</a></li>
+	      </ul>
 			</nav>
 			<div class="content">
-			{{ content }}
+			
+        {{ content }}
 			
 			</div><!-- /.content -->
 			<footer>
-	    		<ul>
-	        		<li><a href="mailto:jonathan.chang512@gmail.com">email</a></li>
-        		  <li><a href="https://github.com/changjo512">github.com/changjo512</a></li>
+	      <ul>
+	        <li><a href="mailto:jonathan.chang512@gmail.com">email</a></li>
+			    % if site.github_username %}
+				  <li>
+				    <a href="https://github.com/{{ site.github_username }}">
+				      <i class="fa fa-github"></i> GitHub
+				    </a>
+				  </li>
+				{% endif %}
+        <!-- li><a href="https://github.com/changjo512">github.com/changjo512</a></li -->
+				{% if site.linkedin_username %}
+				  <li>
+				    <a href="https://linkedin.com/in/{{ site.linkedin_username }}">
+				      <i class="fa fa-linkedin"></i> LinkedIn
+				    </a>
+				  </li>
+				{% endif %}
 				</ul>
 			</footer>
 		</body>
